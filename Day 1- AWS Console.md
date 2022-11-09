@@ -5,7 +5,11 @@ Launch a WhizLabs sandbox and use the credentials to log in to the console.
 
 ## Task
 
-Your task is to set up a simple Express server on AWS EC2.  To start with, we don't need anything complicated. Just use the simple `Hello World` example from the [Express documentation](https://expressjs.com/en/starter/hello-world.html) - something like this...
+The aims of this execise are:
+1. To get familiar with the AWS console and how to access resources, especially EC2.
+1. To be confident in accessing a remote resource and deploying a simple application.
+
+Your task is to set up a basic Express server on AWS EC2.  To start with, we don't need anything complicated. We can just use the simple `Hello World` example from the [Express documentation](https://expressjs.com/en/starter/hello-world.html) - something like this...
 ```node
 const express = require('express')
 const app = express()
@@ -42,4 +46,3 @@ Happy server creation!
 
 ## Extension Task
 How about deploying an Express server you have already created in the backend section of the course? How are you going to get the code from your repo onto the EC2 machine? What additional steps do you need to take?
-
