@@ -28,11 +28,11 @@ Remember that the EC2 instance will have very little pre-installed software - ju
 
 Some guidelines:
  - Use a `t2.micro` instance (the default).
- - You should probably stick to an Amazon Linux operating system, although another Linux OS would do in principle. However, if you choose a different OS, you're on your own...
+ - Use the Amazon Linux operating system, although another Linux OS would do in principle. 
  - Make sure you create a key pair and save it, otherwise you won't be able to access the instance.
  - Make sure you allow HTTP and SSH traffic. If you want to be security conscious, restrict access to your own IP address. (You can edit these settings in the "Security Groups" section if you need to.)
  - Make sure you have enabled public IP address creation.
- - You may need to use a text editor to edit files while working on the server. There are built-in command-line editors called `vi`, `vim` and `nano`. `vi` and `vim` are a bit tricky - basically they are relics of the 1970s and 80s, so of course I love them :grin - but `nano` is probably a bit easier to get used to.
+ - You may need to use a text editor to edit files while working on the server. There are built-in command-line editors called `vi`, `vim` and `nano`. `vi` and `vim` are a bit tricky - basically they are relics of the 1970s and 80s - but `nano` is probably a bit easier to get used to.
  - Remember that you will have to use `npm` to install the code dependencies.
  - The code above listens on Port 3000. Incoming HTTP requests arrive at Port 80. You will need to redirect the request from Port 80 to Port 3000 to allow the server to respond. This sort of thing is normally accomplished by a Web server or "reverse proxy" application like Apache or Nginx. For our basic purposes, we can use a slightly hacky solution that uses the built-in `iptables` bash comand to redirect the traffic:
 ```bash

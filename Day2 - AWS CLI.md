@@ -8,11 +8,6 @@ aws_access_key_id = AKIAXXXXXXXXXXXXXXXX
 aws_secret_access_key = RhUbArbrHUBarbRhubAERbRhuBArbRhuBarB
 ```
 
-You will need to activate your access by typing:
-```bash
-awsume sandbox
-```
-
 You can check you are connected by typing:
 ```bash
 aws sts get-caller-identity
@@ -38,7 +33,7 @@ There are no right answers. Just try to get as much of this to work as you can.
 Try the following:
 1. Make an S3 bucket for storing text - make sure to give it a unique name.
 1. Write a small text file in English and save it to your S3 bucket.
-1. Make a small text file in a different language and save it to the same language.
+1. Make a small text file in a different language and save it to the same bucket.
 1. Make a bucket for storing audio files.
 1. Read the English text from S3
 1. Get Amazon Polly to render a sound file of the text. Choose a voice and pronunciation for the rendered speech. [Challenge: can you get Polly to read in the sound file directly from S3?]
