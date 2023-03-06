@@ -1,7 +1,7 @@
 # Using the AWS Console
 
 ### Prerequisite: 
-Launch a WhizLabs sandbox and use the credentials to log in to the console.
+Launch a WhizLabs sandbox and use the credentials to log in to the console. You should be familiar with the basic process of setting up an EC2 server. Refresh your memory with [this video](https://youtu.be/gQOl7ErZglo).
 
 ## Task
 
