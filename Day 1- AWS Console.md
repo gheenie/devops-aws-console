@@ -44,13 +44,13 @@ This should make your server output accessible to outside traffic. You can use y
 
 Happy server creation!
 
--always use new security group when creating instance - not doing so will create problems with sudo service httpd start
--install compatible ie lower Node version - 16.15.1
--sudo ln -s $(which npm) /usr/bin/npm
+- always use new security group when creating instance - not doing so will create problems with sudo service httpd start
+- install compatible ie lower Node version - 16.15.1
+- sudo ln -s $(which npm) /usr/bin/npm
 
 ## Extension Task
 How about deploying an Express server you have already created in the backend section of the course? How are you going to get the code from your repo onto the EC2 machine? What additional steps do you need to take?
 
--compress into one archive and unpack later - if from local machine
--scp-i PATH-TO-KEYPAIR -r LOCAL-DIRECTORY-OR-FILE ec2-user@ec2-IP-IP-IP-IP.compute-1.amazonaws.com:HOME-FOLDER-SO-IT-DOESNT-REQUIRE-PERMISSIONS
--sudo npm install; if no node_modules ie from repo instead of local machine
+- compress into one archive and unpack later - if from local machine
+- scp-i PATH-TO-KEYPAIR -r LOCAL-DIRECTORY-OR-FILE ec2-user@ec2-IP-IP-IP-IP.compute-1.amazonaws.com:HOME-FOLDER-SO-IT-DOESNT-REQUIRE-PERMISSIONS
+- sudo npm install - if no node_modules ie from repo instead of local machine
