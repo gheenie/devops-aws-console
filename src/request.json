@@ -1,0 +1,6 @@
+{
+   "S3Object": { 
+      "Bucket": "infoomics-demo",
+      "Name": "celebrities.jpg"
+   }
+}
