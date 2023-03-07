@@ -24,8 +24,6 @@
 # aws s3 cp group_of_people.jpg s3://infoomics-demo/group_of_people.jpg
 # aws s3 cp celebrities.jpg s3://infoomics-demo/celebrities.jpg
 
-# aws iam create-policy --policy-name rekognition --policy-document file://policy_rekognition.json
-
 # aws rekognition detect-labels --image file://request.json > response.json
 # aws rekognition detect-faces --image file://request.json --attributes ALL > response.json
 aws rekognition recognize-celebrities --image file://request.json > response.json
