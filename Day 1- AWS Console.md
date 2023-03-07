@@ -47,6 +47,14 @@ Happy server creation!
 - always use new security group when creating instance - not doing so will create problems with sudo service httpd start
 - install compatible ie lower Node version - 16.15.1
 - sudo ln -s $(which npm) /usr/bin/npm
+- to redirect more than once without restarting server
+```bash
+sudo iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT && 
+sudo iptables -A INPUT -s 0.0.0.0 -p tcp -m tcp --dport 80 -j ACCEPT && 
+sudo iptables -A INPUT -s 0.0.0.0 -p tcp -m tcp --dport 9090 -j ACCEPT && 
+sudo iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 9090 && 
+sudo iptables -t nat -I OUTPUT -p tcp -o lo --dport 80 -j REDIRECT --to-ports 9090
+```
 
 ## Extension Task
 How about deploying an Express server you have already created in the backend section of the course? How are you going to get the code from your repo onto the EC2 machine? What additional steps do you need to take?
